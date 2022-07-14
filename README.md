@@ -2,7 +2,10 @@
 sms start up
 
 ---------------------------
-## **THIS REQUIRES A TWILIO ACCOUNT WITH SMS. WITHOUT IT, IT WILL NOT WORK.**
+## required
+node (16 or higher)
+crontab
+UNIX based file system
 ---------------------------
 # how 2 install
 
@@ -20,12 +23,17 @@ sms start up
 `npm install`
 
 3. go into the `.env` file, there are instructions there.
-4. open a terminal
-5. execute `sudo nano /etc/xdg/autostart/ssu.desktop`
-6. paste the following
+
+---------------------------
+
+## how 2 run at bootup
+
+1. open a terminal
+2. execute `touch ~/ssu.sh`
+3. copy ssu.sh into ur ssu.sh file
+4. execute `crontab -e`
+5. at the bottom of the file write
 ```
-[ssu Entry]
-Name=ssu
-Exec=/usr/bin/node /home/pi/ssu/index.js
+@reboot sudo /home/pi/ssu.sh
 ```
-7. u should be done  :)
+6. complete.
