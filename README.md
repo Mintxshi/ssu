@@ -3,9 +3,13 @@ sms start up
 
 ---------------------------
 ## required
+
 node (16 or higher)
+
 crontab
+
 UNIX based file system
+
 ---------------------------
 # how 2 install
 
